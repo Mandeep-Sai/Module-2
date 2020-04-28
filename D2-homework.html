@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+  <style>
+    body{
+      background-color: skyblue;
+    }
+    #links{
+      display: flex;
+      flex-direction: column;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Music Albums</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#favouriteAlbums">Favourite Albums</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#review">Reviews</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#worstAlbums">Hall of Shame</a>
+        </li>
+
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search for Albums" aria-label="Search">
+        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+  <div class="jumbotron border border-primary bg-dark text-white">
+    <h1 class="display-1 text-center">Hey Music Lovers</h1>
+    <p class="lead text-center"><em> Revive and Relive your memories with your favourite Albums</em></p>
+    <hr class="my-4">
+    <p class="text-center">Just Sign up and get a free-trial of premium features for 1 month</p>
+    <div class="row">
+      <div class="col">
+        <a class="btn btn-primary btn-lg btn-block" href="#" role="button">Sign Up</a>
+      </div>
+      <div class="col">
+        <a class="btn btn-primary btn-lg btn-block" href="#" role="button">Login</a>
+      </div>
+    </div>
+  </div>
+  <div id="favouriteAlbums" class="container">
+    <h3 class="text-center text-dark">Favourite Albums</h3>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+      <div class="col">
+        <div class="card my-2 bg-dark text-white">
+          <img src="./divide.png" class="card-img-top" alt="..." />
+          <div class="card-body text-center">
+            <h5 class="card-title name">Divide</h5>
+            <p class=".container card-text">
+              <p class="singer">Singer : Ed Sheeran</p>
+              <p class="genre">Genre : Pop</p>
+              <p class="length">Duration : 46 mins</p>
+              <p class="date">Released : 3 March 2017</p>
+            </p>
+            <a href="#" class="btn btn-primary">Listen</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card my-2 bg-dark text-white">
+          <img src="./1989.png" class="card-img-top" alt="..." />
+          <div class="card-body text-center">
+            <h5 class="card-title name">1989</h5>
+            <p class="card-text">
+              <p class="singer">Singer : Taylor Swift</p>
+              <p class="genre">Genre : Synth Pop</p>
+              <p class="length">Duration : 48 mins</p>
+              <p class="date">Released : 2013</p>
+            </p>
+            <a href="#" class="btn btn-primary">Listen</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card my-2 bg-dark text-white">
+          <img src="./hollywood.jpg" class="card-img-top" alt="..." />
+          <div class="card-body text-center">
+            <h5 class="card-title name">Hollywood's bleeding</h5>
+            <p class="card-text">
+              <p class="singer">Singer : Post Malone</p>
+              <p class="genre">Genre : Pop</p>
+              <p class="length">Duration : 50 mins</p>
+              <p class="date">Released : 5 September 2019</p>
+            </p>
+            <a href="#" class="btn btn-primary">Listen</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card my-2 bg-dark text-white">
+          <img src="./singles.jpg" class="card-img-top" alt="..." />
+          <div class="card-body text-center">
+            <h5 class="card-title name">Singles</h5>
+            <p class="card-text">
+              <p class="singer">Singer : Maroon 5</p>
+              <p class="genre">Genre : Pop</p>
+              <p class="length">Duration : 43 mins</p>
+              <p class="date">Released : 25 September 2015</p>
+            </p>
+            <a href="#" class="btn btn-primary">Listen</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href="#" class="btn btn-primary toggle1 m-3">Hide</a>
+  <div class="container my-5" id="review">
+    <h4 class="text-center text-dark">Don't forget to review your favourite Album</h4>
+    <form>
+      <div class="row">
+        <div class="col">
+          <label for="albumName"> Album Name</label>
+          <input type="text" class="form-control" id="albumName" placeholder="Album Name">
+        </div>
+        <div class="col">
+          <label for="rating">Rating</label>
+          <select class="form-control" id="rating">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+      </div>
+      <div class="row m-1">
+        <label for="reviewText">Review</label>
+        <textarea class="form-control" id="reviewText" rows="3"></textarea>
+      </div>
+      <button type="submit" class="btn btn-dark m-1">Submit</button>
+    </form>
+  </div>
+  <a href="#" class="btn btn-primary toggle2 m-3">Hide</a>
+  <div class="container" id="myFavouriteAlbum">
+    <p class="h4 text-center text-dark">All Time Favourite Album</p>
+    <div class="row my-5 row-cols-sm-2  row-cols-lg-4">
+      <div class="col">
+        <img src="./divide.png" alt="divide">
+      </div>
+      <div class="col">
+        <p>Title : Divide</p>
+        <p>Singer : Ed Sheeran</p>
+        <p>Length : 46 mins</p>
+        <p>Genre : Pop</p>
+      </div>
+      <div class="col">
+        <p class="h6">Tracks</p>
+        <p>Castle on the Hill</p>
+        <p>Shape Of You</p>
+        <p>Perfect</p>
+        <p>Galway Girl</p>
+      </div>
+      <div class="col my-2">
+        <img src="./ed.jpg" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="container" id="worstAlbums">
+    <h3 class="text-center text-danger">Hall Of Shame </h3>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 my-4">
+      <div class="col">
+        <div class="card">
+          <img src="./StreetsInTheSky.jpg" class="card-img-top" alt="..." />
+          <div class="card-body text-center">
+            <h5 class="card-title">Streets in the Sky</h5>
+            <p class=".container card-text">
+              <p class="singer">Band : The Enemy</p>
+              <p class="genre">Genre : Indie Pop</p>
+              <p class="length">Duration : 40 mins</p>
+              <p class="date">Released : 21 May 2012</p>
+            </p>
+          </div>
+        </div>
+      </div>
+  </div>
+  <div class="container my-3" id="singers">
+    <p class="display-4">Favourite Singer</p>
+    <div class="row">
+      <div class="col">
+        <img src="./edsheeran.jpg" alt="">
+      </div>
+      <div class="col">
+        <p>Edward Christopher Sheeran, MBE (/ˈʃɪərən/; born 17 February 1991) is an English singer, songwriter, record producer, and actor.
+           In early 2011, Sheeran independently released the extended play, No. 5 Collaborations Project. After signing with Asylum Records, his debut album, + (pronounced "plus"), was released in September 2011 and topped the UK Albums Chart. 
+           It contained his first hit single "The A Team". In 2012, Sheeran won the Brit Awards for Best British Male Solo Artist and British Breakthrough Act.
+           Sheeran's second studio album, × (pronounced "multiply"), was released in June 2014. It was named the second-best-selling album worldwide of 2015. In the same year, × won Album of the Year at the 2015 Brit Awards, and he received the 
+           Ivor Novello Award for Songwriter of the Year from the British Academy of Songwriters, Composers and Authors. A single from ×, "Thinking Out Loud", earned him the 2016 Grammy Awards for Song of the Year and Best Pop Solo Performance. 
+           Sheeran's third album, ÷ (pronounced "divide"), was released in March 2017, and was the best-selling album worldwide of 2017. The first two singles from the album, "Shape of You" and "Castle on the Hill", broke records in a number of countries by debuting in the top two positions of the charts.
+            He also became the first artist to have two songs debut in the US top 10 in the same week.</p>
+      </div>
+    </div>
+  </div>
+  <div class="container" id="pics">
+    <h3 class="text-center text-dark">Top Albums</h3>
+    <div class="row">
+      <div class="col">
+        <div class="card" style="width: 14rem;">
+          <img src="./1989.png" class="card-img-top" alt="...">
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 14rem;">
+          <img src="./1200x1200bb.jpg" class="card-img-top" alt="...">
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 14rem;">
+          <img src="./220px-Edsheeranplushmv.png" class="card-img-top" alt="...">
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 14rem;">
+          <img src="./71MnvffNWML._SL1425_.jpg" class="card-img-top" alt="...">
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 14rem;">
+          <img src="./Beerbongs_&_Bentleys_by_Post_Malone.png" class="card-img-top" alt="...">
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 14rem;">
+          <img src="./divide.png" class="card-img-top" alt="...">
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 14rem;">
+          <img src="./hollywood.jpg" class="card-img-top" alt="...">
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 14rem;">
+          <img src="./red-1497635192-640x640.jpg" class="card-img-top" alt="...">
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 14rem;">
+          <img src="./singles.jpg" class="card-img-top" alt="...">
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 14rem;">
+          <img src="./Stars_Dance.png" class="card-img-top" alt="...">
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 14rem;">
+          <img src="./StreetsInTheSky.jpg" class="card-img-top" alt="...">
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 14rem;">
+          <img src="./the-weeknd-starboy-176671.jpg" class="card-img-top" alt="...">
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 14rem;">
+          <img src="./Wolves.jpg" class="card-img-top" alt="...">
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 14rem;">
+          <img src="./X_cover.png" class="card-img-top" alt="...">
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 14rem;">
+          <img src="./cca04d86d3775292c232ed59af1923f2.jpg" class="card-img-top" alt="...">
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 14rem;">
+          <img src="./Alive_cover.png" class="card-img-top" alt="...">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid my-4 bg-dark p-3" id="footer">
+    <div class="row text-white">
+      <div class="col" id="links">
+        <a href="http://facebook.com">Facebook</a>
+        <a href="http://facebook.com">Twitter</a>
+        <a href="http://facebook.com">Gmail</a>
+        <a href="http://facebook.com">Instagram</a>
+      </div>
+      <div class="col">
+        <p>Contact Us</p>
+        <p>Address</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="D2-homework.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
