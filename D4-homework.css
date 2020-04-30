@@ -1,0 +1,11 @@
+body{
+  background-color: rgb(206, 167, 167);
+}
+#nameList p {
+  text-transform: capitalize;
+  font-size: 20px;
+  margin-bottom: 2px;
+}
+#teamRow{
+  margin: 30px auto;
+}
