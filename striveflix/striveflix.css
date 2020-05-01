@@ -1,0 +1,87 @@
+body{
+  background-color:#0A0A0A ;
+  color: white;
+}
+#navbar{
+  margin: 0;
+}
+#navbarNav li a{
+  color: #DDDDDD;
+}
+#navbarNav li a:hover{
+  color: #c1c1c1;
+}
+.icon{
+  color: #DDDDDD;
+  margin-top: 9px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+#profilePic{
+  width: 23px;
+  height: 23px;
+}
+#heading{
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+}
+#heading p{
+  margin-left: 15px;
+  font-size: 24px;
+  font-weight: 400;
+}
+#heading button{
+  margin: 0 15px;
+  height: 40px;
+  color: #c1c1c1;
+  border-color: #c1c1c1;
+}
+#headingIcons{
+  position: absolute;
+  top: 10px;
+  right: 50px;
+}
+#headingIcons i {
+  
+  margin: 0 7px;
+  font-size: 20px;
+}
+.navbar-toggler-icon {
+  border-radius: 5px;
+  /* background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0,0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); */
+}
+#navRight{
+  display: flex;
+}
+#navRight i,p{
+  margin: 6px 7px;
+  font-size: 20px;
+}
+#navRight i{
+  margin-top: 12px;
+}
+#series img{
+  width: 100%;
+  height: 100%;
+  height: 140px;
+  overflow: hidden;
+  object-fit: fill;
+}
+.seriesRow{
+  margin-top: -10px;
+  margin-bottom: 20px;
+}
+#footerIcons{
+  font-size: 30px;
+}
+#footerIcons i{
+  margin: 0 10px;
+  color: #c1c1c1;
+}
+.footerContent p{
+  font-size: 15px;
+  color: #c1c1c1;
+  margin: 5px 5px;
+  /* margin-left: 5px; */
+}
