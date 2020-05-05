@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+   <!-- CSS styling -->
+    <style>
+      #ex1 .row.outerRow{
+        height: 400px;
+        border: solid 2px black;
+        border-radius: 50px;
+      }
+      #ex1 .row div.col-6{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: green;
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
+        color: white;
+        /* text-align: center; */
+      }
+      #ex1 .row div.col-6 >p {
+        margin-bottom: 0em;
+      }
+      #ex1 div.row div.col-2{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        background-color: rgb(45, 162, 240);
+        color: white;
+        font-weight: bold;
+      }
+      #ex1 div.row div.col-2 > p {
+        margin-bottom: 0;
+      }
+      /* #ex1 div.row div.col-4 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+      } */
+      #ex1 div.row div.col-4 #innerRow1{
+        justify-content: center;
+        align-content: center;
+        box-sizing: border-box;
+        height: 132px;
+        background-color: rgb(223, 213, 84);
+        border-top-right-radius: 50px;
+      }
+      #ex1 div.row div.col-4 #innerRow2{
+        justify-content: center;
+        align-content: center;
+        box-sizing: border-box;
+        height: 132px;
+        background-color: rgb(216, 216, 33);      
+      }
+      #ex1 div.row div.col-4 #innerRow3{
+        justify-content: center;
+        align-content: center;
+        box-sizing: border-box;
+        height: 132px;
+        background-color: rgb(250, 250, 0);
+        border-bottom-right-radius: 50px;
+      }
+      #ex2 div.row div.col p.card-text p{
+        text-align: center;
+        margin-bottom: 0;
+      }
+      #ex3 div.row div.col div.card-body div#ex3CardButtons{
+        position: relative;
+        display: flex;
+      }
+      #ex3 div.row div.col div.card-body div#ex3CardButtons div{
+        margin-right: auto;
+      }
+      #ex5 div.row div.col p:not(:first-child){
+        margin-bottom: 0;
+        color: grey;
+      }
+    </style>
+    <title>Day7</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary ">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Exercise 1 -->
+    <div class="container">
+      <div class="container" id="ex1">
+        <p class="display-4 text-center">Exercise 1</p>
+        <div class="row outerRow">
+          <div class="col-6 text-center">
+            <p>First Column</p>
+            <p>Height 400px</p>
+            <p>Green ish background</p>
+            <p>Text centered</p>
+          </div>
+          <div class="col-2">
+            <p>Second column</p>
+            <p>Text to the bottom</p>
+            <p>bold, bluish background</p>
+          </div>
+          <div class="col-4">
+            <div class="row" id="innerRow1">
+              <p>Third Column Part 1</p>
+            </div>
+            <div class="row" id="innerRow2">
+              <p>Third Column Part 2</p>
+            </div>
+            <div class="row" id="innerRow3">
+              <p>Third Column Part 3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Exercise - 2 -->
+    <div class="container my-5" id="ex2">
+      <p class="display-4 text-center">Exercise 2</p>
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <h5 class="card-header text-center">Free</h5>
+            <div class="card-body">
+              <h5 class="card-title text-center">$0 / mo</h5>
+              <p class="card-text">
+                <p class="text-center mb-0">10 users include</p>
+                <p class="text-center mb-0">2 GB of storage</p>
+                <p class="text-center mb-0">Email support</p>
+                <p class="text-center mb-0">Help center acess</p>
+              </p>
+              <a href="#" class="btn btn-outline-primary btn-block">Sign up for free</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <h5 class="card-header text-center">Pro</h5>
+            <div class="card-body">
+              <h5 class="card-title text-center">$15 / mo</h5>
+              <p class="card-text">
+                <p class="text-center mb-0">20 users include</p>
+                <p class="text-center mb-0">10 GB of storage</p>
+                <p class="text-center mb-0">Priority email support</p>
+                <p class="text-center mb-0">Help center acess</p>
+              </p>
+              <a href="#" class="btn btn-primary btn-block">Get started</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <h5 class="card-header text-center">Enterprise</h5>
+            <div class="card-body">
+              <h5 class="card-title text-center">$29 / mo</h5>
+              <p class="card-text">
+                <p class="text-center mb-0">30 users include</p>
+                <p class="text-center mb-0">15 GB of storage</p>
+                <p class="text-center mb-0">Phone and email support</p>
+                <p class="text-center mb-0">Help center acess</p>
+              </p>
+              <a href="#" class="btn btn-primary btn-block">Contact us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Exercise-3 -->
+    <div class="container my-5" id="ex3" >
+      <p class="display-4 text-center">Exercise 3</p>
+      <div class="row my-3">
+        <div class="col">
+          <div class="card" style="width: 20rem;">
+            <img src="https://placehold.it/200x130" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Here you can place your video description,in order to inform the user of what to expect
+                by clicking on the link
+              </p>
+              <div id="ex3CardButtons">
+                <div>
+                  <a href="#" class="btn btn-outline-dark">View</a>
+                  <a href="#" class="btn btn-outline-dark">Edit</a>
+                </div>
+                <p>9 mins</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 20rem;">
+            <img src="https://placehold.it/200x130" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Here you can place your video description,in order to inform the user of what to expect
+                by clicking on the link
+              </p>
+              <div id="ex3CardButtons">
+                <div>
+                  <a href="#" class="btn btn-outline-dark">View</a>
+                  <a href="#" class="btn btn-outline-dark">Edit</a>
+                </div>
+                <p>9 mins</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 20rem;">
+            <img src="https://placehold.it/200x130" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Here you can place your video description,in order to inform the user of what to expect
+                by clicking on the link
+              </p>
+              <div id="ex3CardButtons">
+                <div>
+                  <a href="#" class="btn btn-outline-dark">View</a>
+                  <a href="#" class="btn btn-outline-dark">Edit</a>
+                </div>
+                <p>9 mins</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row my-3" >
+        <div class="col">
+          <div class="card" style="width: 20rem;">
+            <img src="https://placehold.it/200x130" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Here you can place your video description,in order to inform the user of what to expect
+                by clicking on the link
+              </p>
+              <div id="ex3CardButtons">
+                <div>
+                  <a href="#" class="btn btn-outline-dark">View</a>
+                  <a href="#" class="btn btn-outline-dark">Edit</a>
+                </div>
+                <p>9 mins</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 20rem;">
+            <img src="https://placehold.it/200x130" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Here you can place your video description,in order to inform the user of what to expect
+                by clicking on the link
+              </p>
+              <div id="ex3CardButtons">
+                <div>
+                  <a href="#" class="btn btn-outline-dark">View</a>
+                  <a href="#" class="btn btn-outline-dark">Edit</a>
+                </div>
+                <p>9 mins</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 20rem;">
+            <img src="https://placehold.it/200x130" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Here you can place your video description,in order to inform the user of what to expect
+                by clicking on the link
+              </p>
+              <div id="ex3CardButtons">
+                <div>
+                  <a href="#" class="btn btn-outline-dark">View</a>
+                  <a href="#" class="btn btn-outline-dark">Edit</a>
+                </div>
+                <p>9 mins</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row my-3" >
+        <div class="col">
+          <div class="card" style="width: 20rem;">
+            <img src="https://placehold.it/200x130" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Here you can place your video description,in order to inform the user of what to expect
+                by clicking on the link
+              </p>
+              <div id="ex3CardButtons">
+                <div>
+                  <a href="#" class="btn btn-outline-dark">View</a>
+                  <a href="#" class="btn btn-outline-dark">Edit</a>
+                </div>
+                <p>9 mins</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 20rem;">
+            <img src="https://placehold.it/200x130" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Here you can place your video description,in order to inform the user of what to expect
+                by clicking on the link
+              </p>
+              <div id="ex3CardButtons">
+                <div>
+                  <a href="#" class="btn btn-outline-dark">View</a>
+                  <a href="#" class="btn btn-outline-dark">Edit</a>
+                </div>
+                <p>9 mins</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 20rem;">
+            <img src="https://placehold.it/200x130" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Here you can place your video description,in order to inform the user of what to expect
+                by clicking on the link
+              </p>
+              <div id="ex3CardButtons">
+                <div>
+                  <a href="#" class="btn btn-outline-dark">View</a>
+                  <a href="#" class="btn btn-outline-dark">Edit</a>
+                </div>
+                <p>9 mins</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Exercise - 4 -->
+    <div class="container my-5" id="ex4">
+      <p class="display-4 text-center">Exercise 4</p>
+      <div class="row">
+        <div class="col-8">
+          <p class="h3" style="display: inline;">Page Heading</p><p class="lead" style="display: inline; margin-left: 5px;">Secondary Text</p>
+          <div class="card" >
+            <img src="https://placehold.it/750x300" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Post title</h5>
+              <p class="card-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut minima necessitatibus, molestias quod ipsum officia, consequuntur ipsam molestiae laudantium harum magnam repellat doloremque corrupti adipisci voluptate quam. Odit, quae enim.</p>
+              <a href="#" class="btn btn-primary">Read more</a>
+            </div>
+            <div class="card-footer text-muted">
+              Posted on January 10, 2020 by Admin
+            </div>
+          </div>
+          <div class="card my-3" >
+            <img src="https://placehold.it/750x300" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Post title</h5>
+              <p class="card-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut minima necessitatibus, molestias quod ipsum officia, consequuntur ipsam molestiae laudantium harum magnam repellat doloremque corrupti adipisci voluptate quam. Odit, quae enim.</p>
+              <a href="#" class="btn btn-primary">Read more</a>
+            </div>
+            <div class="card-footer text-muted">
+              Posted on January 10, 2020 by Admin
+            </div>
+          </div>
+          <div class="card my-3" >
+            <img src="https://placehold.it/750x300" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Post title</h5>
+              <p class="card-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut minima necessitatibus, molestias quod ipsum officia, consequuntur ipsam molestiae laudantium harum magnam repellat doloremque corrupti adipisci voluptate quam. Odit, quae enim.</p>
+              <a href="#" class="btn btn-primary">Read more</a>
+            </div>
+            <div class="card-footer text-muted">
+              Posted on January 10, 2020 by Admin
+            </div>
+          </div>
+          <nav aria-label="Page navigation" style="display: flex; justify-content: center;">
+            <ul class="pagination">
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">Older</a></li>
+              <li class="page-item"><a class="page-link" href="#">Newer</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-4">
+          <div class="card">
+            <div class="card-header h6">
+              Find in my blog
+            </div>
+            <div class="card-body">
+              <div class="custom-file">
+                <input type="file" class="custom-file-input" id="customFile">
+                <label class="custom-file-label" for="customFile">Search</label>
+              </div>
+            </div>
+          </div>
+          <div class="card my-3">
+            <div class="card-header h6">
+              Categories
+            </div>
+            <div class="card-body">
+              <div class="row" style="color: rgb(34, 103, 230); font-weight: bold;">
+                <div class="col" >
+                  <p>Web Design</p>
+                  <p>HTML</p>
+                  <p>CSS</p>
+                </div>
+                <div class="col">
+                  <p>JavaScript</p>
+                  <p>SASS</p>
+                  <p>Bootstrap4</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card my-3">
+            <div class="card-header h6">
+              Widgets
+            </div>
+            <div class="card-body">
+              <p>Usually here you can put all your custom widgets to enhance the user experience</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer Exercise-5 -->
+    <footer>
+      <div class="container my-5" id="ex5">
+        <p class="display-4 text-center">Exercise 5</p>
+        <hr>
+        <div class="row my-3">
+          <div class="col">
+            <p class="h6">Features</p>
+            <p>Cool stuff</p>
+            <p>Random feature</p>
+            <p>Team feature</p>
+            <p>Stuff for developers</p>
+            <p>Another one</p>
+            <p>Last time</p>
+          </div>
+          <div class="col">
+            <p class="h6">Resources</p>
+            <p>Resource</p>
+            <p>Resource Name</p>
+            <p>Another resource</p>
+            <p>Final resource</p>
+          </div>
+          <div class="col">
+            <p class="h6">About</p>
+            <p>Team</p>
+            <p>Location</p>
+            <p>Privacy</p>
+            <p>Terms</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
