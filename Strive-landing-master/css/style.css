@@ -1,0 +1,206 @@
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  color: #181818;
+}
+
+section {
+  padding: 80px 0;
+}
+
+section h2 {
+  font-size: 60px;
+}
+
+section.black-bg,
+section.bg-strive-red {
+  color: white;
+}
+
+section:not(#section-what):not(#join-section) img {
+  border-radius: 50%;
+  filter: grayscale(100%);
+}
+
+section ul {
+  padding-left: 0;
+}
+
+section ul li {
+  list-style: none;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 0.005rem;
+}
+
+.black-bg {
+  background-color: #181818;
+}
+
+.strive-red {
+  color: #ef3d59;
+}
+
+.bg-strive-red {
+  background-color: #ef3d59;
+}
+
+.bolder {
+  font-weight: 700;
+}
+
+.btn {
+  width: 280px !important;
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+  border-radius: 0 !important;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: white;
+}
+
+.btn.bg-strive-red {
+  border-bottom: 4px solid #d0354d;
+}
+
+.btn.black-bg {
+  border-bottom: 4px solid #181818;
+}
+
+.btn.bg-strive-red:hover {
+  color: white;
+  background-color: #f15069;
+}
+
+.btn.black-bg:hover {
+  color: white;
+  background-color: #272727;
+}
+
+#jumbotron {
+  color: white;
+  background: url("../assets/Tavola-disegno-1-2x.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+#jumbotron > .container {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#success-section img {
+  width: 230px;
+  height: 230px;
+  filter: grayscale(100%) blur(10px);
+  transform: scale(1);
+  transition: -webkit-filter 0.1s cubic-bezier(0.215, 0.61, 0.355, 1),
+    transform 0.1s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+#success-section img ~ p {
+  transform: translateY(0);
+  transition: transform 0.1s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+#success-section img:hover {
+  transform: scale(1.2);
+  filter: grayscale(0%) blur(0);
+}
+
+#success-section img:hover ~ p {
+  transform: translateY(1rem);
+}
+
+#section-what img {
+  width: 100%;
+  height: 100%;
+  filter: grayscale(100%);
+  opacity: 0.5;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+#section-what .img-wrapper {
+  width: 100%;
+  height: 100px;
+}
+
+#section-what p {
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  line-height: 1.6;
+}
+
+#section-cta h2 {
+  font-size: 4.5rem;
+  padding-right: 2rem;
+}
+
+#section-cta ul li {
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+#section-cta > .container > .row > div:nth-child(2) > .white-card {
+  background-color: white;
+  color: #181818;
+  border-radius: 25px;
+  padding: 2rem 3rem;
+}
+
+#section-email input[type="email"] {
+  width: 60%;
+  height: 77px;
+  padding: 0.5rem 2rem;
+  text-align: center;
+  background-color: #f1f1f1;
+  font-size: 1.3rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+}
+footer {
+  font-size: 0.9rem;
+  padding: 5rem 3rem;
+}
+
+footer a {
+  color: white;
+}
+
+footer a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+footer > .container > div:first-child {
+  width: 33%;
+}
+
+@media (min-width: 768px) {
+  #jumbotron h1 {
+    max-width: 80%;
+  }
+
+  #jumbotron h5 {
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  #section-what .img-wrapper {
+    padding: 0 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  #jumbotron h5 {
+    max-width: 40%;
+  }
+}
