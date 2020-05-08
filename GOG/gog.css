@@ -1,0 +1,103 @@
+#navContainer{
+  position: fixed;
+  background-color: #2C2C2C !important;
+  z-index: 3;
+}
+nav{
+  background-color: #2C2C2C !important;
+}
+nav ul li a{
+  color: #CBCBCB !important;
+}
+.navIcons{
+  color: #CBCBCB;
+  margin: 0 10px;
+}
+#bodyContainer{
+  background-color: #D8D8D8;
+}
+#belowNav >*{
+  margin: 10px 2px;
+  padding: 2px;
+}
+#belowNav p{
+  font-weight: 500;
+}
+#firstCarousel img{
+  height: 78vh;
+  object-fit: cover;
+}
+#firstCarousel .carousel-inner p{
+  font-family: 'Lato';
+  font-size: 30px;
+}
+#firstCarousel .carousel-inner button{
+  color: white;
+  background-color: #9DCB3C;
+  margin-left: 2rem;
+  margin-right: 0;
+  height: 45px;
+  width: 250px;
+  box-shadow: 5px 5px 5px 2px black;
+}
+#firstCard .card-body p:first-child{
+  background-color: #78387B;
+  color: white;
+  border-radius: 2px;
+  padding: 6px 8px;
+}
+#firstCard .card-body p:not(:first-child){
+  font-size: 11px;
+  display: block;
+  padding: 2px 2px;
+}
+#firstCard .card img{
+  height: 280px;
+  width: 100%;
+  object-fit: cover;
+}
+#belowFirstCard a{
+  color: #78387B;
+}
+#secondColumn i{
+  font-size: 10px;
+}
+#secondCard .card-body p:first-child{
+  background-color: #78387B;
+  color: white;
+  border-radius: 2px;
+  height: 2rem;
+  margin-top: 5px;
+  padding: 3px 8px;
+}
+#secondCard .card-body p:not(:first-child){
+  font-size: 11px;
+  display: block;
+  padding: 2px 2px;
+}
+
+#footerRow1{
+  display: flex;
+  margin-right: auto;
+}
+#footerRow1 p{
+  margin: 0 10px;
+}
+#languages{
+  margin: 0 10px;
+}
+#languages a{
+  color: white !important;
+}
+#languages a:active{
+  color: #78387B;
+}
+footer a{
+  color: white;
+}
+#lastRow{
+  margin-top: -30px;
+}
+#lastRow a{
+  margin-right: 10px;
+}
