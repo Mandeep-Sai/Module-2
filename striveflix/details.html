@@ -10,6 +10,41 @@
     <link rel="stylesheet" href="striveflix.css">
     <script src="https://kit.fontawesome.com/ddd26a46d6.js" crossorigin="anonymous"></script>
    <title>STRIVEFLIX</title>
+   <style>
+     #movieInfo {
+       display: flex;
+       margin-left: 15%;
+       height: 50vh;
+     }
+     #movieInfo img{
+       height: 16rem;
+     }
+     #info{
+       margin-left: 20px;
+     }
+     #info p{
+       font-size: 18px;
+       font-weight: 100;
+     }
+     #info p:first-of-type{
+       font-size: 28px;
+       font-weight: 400;
+     }
+     #deleteBtn,#editBtn{
+       margin-left: 10px;
+       margin-top: auto;
+       background-color: rgb(27, 25, 25);
+       border-radius: 18px;
+       color: white;
+     }
+     #deleteBtn:hover,#editBtn:hover{
+      background-color: #E50914;
+      color: black;
+     }
+     #productInfo{
+       background: linear-gradient(180deg, rgba(10,10,10,1) 13%, rgba(229,9,20,1) 100%);
+     }
+   </style>
   </head>
   <body>
     <!-- Nav Bar -->
@@ -24,11 +59,11 @@
             <li class="nav-item">
               <a class="nav-link" href="/striveflix.html">Home</a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item ">
               <a class="nav-link"  href="striveflix.html">TV Shows <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Movies</a>
+              <a class="nav-link active" href="#">Movies</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Recently Added</a>
@@ -54,92 +89,14 @@
         </div>
       </nav>
     </div>
-    <!-- Heading -->
-    <div class="container-fluid" id="heading">
-      <p class="display-4"  style="color:rgb(206, 23, 33) !important;">Movies & Anime</p>
-      <div class="dropdown">
-        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Genre
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#">Horror</a>
-          <a class="dropdown-item" href="#">Romance</a>
-          <a class="dropdown-item" href="#">Sci-fi</a>
-        </div>
-      </div>
-      <div id="headingIcons">
-        <i class="fas fa-stream"></i>
-        <i class="fas fa-th"></i>
-      </div>
-    </div>
 
-  <div id="content">
-    <!-- series -->
-    <!-- <div class="container-fluid"  id="series">
-      <p class="display-4" style="font-size: 22px;">Trending Now</p>
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-5 seriesRow">
-        <div class="col my-3">
-            <img src="./series-1.jpg"  alt="...">
-        </div>
-        <div class="col my-3">
-            <img src="./series-2.jpg" alt="...">
-        </div>
-        <div class="col my-3">
-            <img src="./series-3.jpg" alt="...">
-        </div>
-        <div class="col my-3">
-            <img src="./series-5.jpg" alt="...">
-        </div>
-        <div class="col my-3">
-            <img src="./series-6.jpg" alt="...">
-        </div>
-      </div>
-    </div> -->
-    <!-- <div class="container-fluid"  id="series">
-      <p class="display-4" style="font-size: 22px;">Watch it again</p>
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-5 seriesRow">
-        <div class="col my-3">
-            <img src="./series-18.jpg"  alt="...">
-        </div>
-        <div class="col my-3">
-            <img src="./series-8.jpg" alt="...">
-        </div>
-        <div class="col my-3">
-            <img src="./series-9.jpg" alt="...">
-        </div>
-        <div class="col my-3">
-            <img src="./series-10.jpg" alt="...">
-        </div>
-        <div class="col my-3">
-            <img src="./series-11.jpg" alt="...">
-        </div>
-      </div>
-    </div> -->
-    <!-- <div class="container-fluid"  id="series">
-      <p class="display-4" style="font-size: 22px;">New Releases</p>
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-5 seriesRow">
-        <div class="col my-3">
-            <img src="./series-12.jpg"  alt="...">
-        </div>
-        <div class="col my-3">
-            <img src="./series-13.jpg" alt="...">
-        </div>
-        <div class="col my-3">
-            <img src="./series-14.jpg" alt="...">
-        </div>
-        <div class="col my-3">
-            <img src="./series-15.jpg" alt="...">
-        </div>
-        <div class="col my-3">
-            <img src="./series-16.jpg" alt="...">
-        </div>
-      </div>
-    </div> -->
+  <div id="productInfo">
+    
   </div>
     <!-- trail -->
   <!-- trail -->
     <!-- Footer -->
-    <div class="container" id="footer">
+    <div class="container">
       <div class="row">
         <div class="col" id="footerIcons">
           <i class="fab fa-facebook-square"></i>
@@ -181,6 +138,47 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="striveflix.js"></script>
     <script>
+      let id;
+      let category;
+      window.onload = async() =>{
+        let urlParams = new URLSearchParams(window.location.search);
+        let container = document.querySelector('#productInfo')
+        id = urlParams.get('id');
+        category = urlParams.get('category');
+        let movie = await getMovie(category,id);
+        container.innerHTML += `
+        <div id="movieInfo">
+          <div>
+            <img src="${movie.imageUrl}" alt="">
+          </div>
+          <div id="info">
+            <p>${movie.name}</p>
+            <p>Category : ${movie.category}</p>
+            <p>Description : ${movie.description}</p>
+            <div class="d-flex">
+              <div><button type="button" id="editBtn" onclick="editMovie()" class="btn btn-danger">Edit</button></div>
+              <div><button type="button" id="deleteBtn" onclick ="deleteMovie()" class="btn btn-danger">Delete</button></div>
+            </div>
+          </div>
+        </div>
+        
+        `
+      }
+      const editMovie = ()=>{
+        location.href = `backoffice.html?id=${id}&category=${category}`
+      }
+      const deleteMovie = async()=>{
+        let response = await fetch('https://striveschool.herokuapp.com/api/movies/'+id,{
+          method:'DELETE',
+          headers : new Headers({
+            'Authorization': 'Basic dXNlcjE4OlEyejVWN2hFRlU2SktSckU='
+          })
+        })
+        if(response.ok){
+          alert("Deleted Sucessfully")
+          location.href = 'striveflix.html'
+        }
+      }
     </script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

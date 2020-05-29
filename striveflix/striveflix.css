@@ -1,5 +1,6 @@
 body{
-  background-color:#0A0A0A ;
+  background-color: #0A0A0A;
+  /* background:  linear-gradient(180deg, rgba(10,10,10,1) 11%, rgba(229,9,20,1) 89%); */
   color: white;
 }
 #navbar{
@@ -9,7 +10,7 @@ body{
   color: #DDDDDD;
 }
 #navbarNav li a:hover{
-  color: #c1c1c1;
+  color: #E50914;
 }
 .icon{
   color: #DDDDDD;
@@ -84,4 +85,30 @@ body{
   color: #c1c1c1;
   margin: 5px 5px;
   /* margin-left: 5px; */
+}
+#saveBtn{
+  background-color: #E50914;
+  color: black;
+  margin-left: 50%;
+}
+#content img{
+  height: 12rem;
+  width: 12rem;
+}
+#content a{
+  color: white;
+  text-decoration: none;
+}
+#content .row .col p{
+  font-size: 16px;
+}
+#content .row .col a:hover{
+  color: black !important;
+}
+#content .row .col img:hover{
+  transform: scale(1.05);
+  transition: ease-in-out 0.4s;
+}
+#content{
+  background: linear-gradient(180deg, rgba(10,10,10,1) 8%, rgba(229,9,20,1) 97%);
 }
