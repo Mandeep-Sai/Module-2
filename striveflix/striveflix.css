@@ -112,3 +112,66 @@ body{
 #content{
   background: linear-gradient(180deg, rgba(10,10,10,1) 8%, rgba(229,9,20,1) 97%);
 }
+.glide__arrows button{
+  border: 2px solid black;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  color: #E50914;
+  box-shadow: 9px -9px 21px 9px rgba(0,0,0,0.75);
+}
+.glide__arrow--left{
+  left: 0.5em !important;
+}
+.glide__arrow--right{
+  right: 0.5em !important;
+}
+
+.glide img:hover{
+  transform: scale(1.1);
+  transition: ease-in-out 0.4s;
+}
+.search-txt{
+  border: none;
+  color: white;
+  padding: 0;
+  outline: none;
+  background: none;
+  font-size: 16px;
+  line-height: 40px;
+  transition: 0.4s;
+  width: 0px;
+}
+#search-btn{
+  color: #E50914;
+  float: right;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: 0.4s;
+}
+.searchbox:hover > .search-txt{
+  width: 200px;
+  padding: 0 6px;
+  color: #E50914;
+}
+.searchbox:hover > #search-btn{
+  background: white;
+}
+.searchbox{
+  height: 40px;
+  border-radius: 40px;
+  background: transparent;
+  padding: 0px;
+  }
+#content .row .col{
+  padding: 10px;
+  overflow: hidden;
+}
+#content .row .col p{
+  color: black;
+  font-weight: 500;
+}

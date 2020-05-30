@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
+    <script src="./glide-3.4.1/dist/glide.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="striveflix.css">
     <script src="https://kit.fontawesome.com/ddd26a46d6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./glide-3.4.1/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="./glide-3.4.1/dist/css/glide.theme.min.css">
    <title>STRIVEFLIX</title>
   </head>
   <body>
@@ -39,7 +42,12 @@
           </ul>
         </div>
         <div id="navRight" class="d-none d-lg-flex">
-          <i class="fas fa-search"></i>
+          <div class="searchbox">
+            <input class="search-txt" type="text" name="" placeholder="Search">
+            <a id="search-btn" onclick="filterItems()">
+              <i class="fas fa-search"></i>
+            </a>
+          </div>
           <p>KIDS</p>
           <i class="fas fa-bell"></i>
           <div class="dropdown">
@@ -74,67 +82,7 @@
     </div>
 
   <div id="content">
-    <!-- series -->
-    <!-- <div class="container-fluid"  id="series">
-      <p class="display-4" style="font-size: 22px;">Trending Now</p>
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-5 seriesRow">
-        <div class="col my-3">
-            <img src="./series-1.jpg"  alt="...">
-        </div>
-        <div class="col my-3">
-            <img src="./series-2.jpg" alt="...">
-        </div>
-        <div class="col my-3">
-            <img src="./series-3.jpg" alt="...">
-        </div>
-        <div class="col my-3">
-            <img src="./series-5.jpg" alt="...">
-        </div>
-        <div class="col my-3">
-            <img src="./series-6.jpg" alt="...">
-        </div>
-      </div>
-    </div> -->
-    <!-- <div class="container-fluid"  id="series">
-      <p class="display-4" style="font-size: 22px;">Watch it again</p>
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-5 seriesRow">
-        <div class="col my-3">
-            <img src="./series-18.jpg"  alt="...">
-        </div>
-        <div class="col my-3">
-            <img src="./series-8.jpg" alt="...">
-        </div>
-        <div class="col my-3">
-            <img src="./series-9.jpg" alt="...">
-        </div>
-        <div class="col my-3">
-            <img src="./series-10.jpg" alt="...">
-        </div>
-        <div class="col my-3">
-            <img src="./series-11.jpg" alt="...">
-        </div>
-      </div>
-    </div> -->
-    <!-- <div class="container-fluid"  id="series">
-      <p class="display-4" style="font-size: 22px;">New Releases</p>
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-5 seriesRow">
-        <div class="col my-3">
-            <img src="./series-12.jpg"  alt="...">
-        </div>
-        <div class="col my-3">
-            <img src="./series-13.jpg" alt="...">
-        </div>
-        <div class="col my-3">
-            <img src="./series-14.jpg" alt="...">
-        </div>
-        <div class="col my-3">
-            <img src="./series-15.jpg" alt="...">
-        </div>
-        <div class="col my-3">
-            <img src="./series-16.jpg" alt="...">
-        </div>
-      </div>
-    </div> -->
+    
   </div>
     <!-- trail -->
   <!-- trail -->
