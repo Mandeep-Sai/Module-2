@@ -35,7 +35,7 @@
     for(let i=0;i<categories.length;i++){
       content.innerHTML += `
       <div class="container-fluid series${i}" >
-        <p class="mt-3" style="font-size: 20px; color: white;">${categories[i].toUpperCase()}</p>
+        <p class="pt-3 pb-2 title" style="font-size: 20px; color: white;">${categories[i].toUpperCase()}</p>
         <div class="glide ${i}">
         <div class="glide__track" data-glide-el="track">
           <ul class="glide__slides">
@@ -56,7 +56,7 @@
         for(let j=0;j<movies.length;j++){
           categoryContainer.innerHTML +=`
           <li class="glide__slide">
-            <a href="details.html?id=${movies[j]._id}&category=${categories[i]}"><img src="${movies[j].imageUrl}" alt=""></a>
+            <div><a href="details.html?id=${movies[j]._id}&category=${categories[i]}"><img class="img-fluid" src="${movies[j].imageUrl}" alt=""></a></div>
           </li>
           `
         }
@@ -70,13 +70,19 @@
       for (var i = 0; i < sliders.length; i++) {
         var glide = new Glide(sliders[i], {
           type:'carousel',
-          perView:6,
-          gap: 1,
+          perView:4,
+          gap: -90,
           autoplay: 2000,
-          peek: {
-            before:0,
-            after: 50
+          breakpoints:{
+            1200:{
+              perView :3
+            },
+            991:{
+              gap:10,
+              perView :2
+            }
           }
+          
         });       
         glide.mount();
       }
